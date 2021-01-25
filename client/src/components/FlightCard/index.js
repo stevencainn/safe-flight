@@ -76,15 +76,15 @@ class FlightCard extends React.Component {
             <CardBody className="cardbody">
               <CardTitle className="title">
                 <FontAwesomeIcon className= "fa-icon" icon="plane-departure" />
-                DEPARTING Flight: {} {}</CardTitle>
-                <CardText className="departing">Departing from: {} at {}</CardText>
-                <CardText className="arriving">Arriving at: {} at {}</CardText> 
+                DEPARTING Flight: {this.props.flight.itineraries[0].segments[0].carrierCode} {this.props.flight.itineraries[0].segments[0].number}</CardTitle>
+                <CardText className="departing">Departing from: {this.props.flight.itineraries[0].segments[0].departure.iataCode} at {this.props.flight.itineraries[0].segments[0].departure.at}</CardText>
+                <CardText className="arriving">Arriving at: {this.props.flight.itineraries[0].segments[0].arrival.iataCode} at {this.props.flight.itineraries[0].segments[0].arrival.at}</CardText> 
               <hr></hr>
               <CardTitle className="title">
               <FontAwesomeIcon className= "fa-icon" icon="plane-arrival" />
-              RETURNING Flight: {} {}</CardTitle>
-                <CardText className="departing">Departing from: {} at {}</CardText>
-                <CardText className="arriving">Arriving at: {} at {}</CardText>
+              RETURNING Flight: {this.props.flight.itineraries[1].segments[0].carrierCode} {this.props.flight.itineraries[1].segments[0].number}</CardTitle>
+                <CardText className="departing">Departing from: {this.props.flight.itineraries[1].segments[0].departure.iataCode} at {this.props.flight.itineraries[1].segments[0].departure.at}</CardText>
+                <CardText className="arriving">Arriving at: {this.props.flight.itineraries[1].segments[0].arrival.iataCode} at {this.props.flight.itineraries[1].segments[0].arrival.at}</CardText>
               <hr></hr>
                 <CardText className="dollar">
                   <FontAwesomeIcon className="fa-icon" icon="money-bill-wave" />

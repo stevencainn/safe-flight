@@ -49,6 +49,7 @@ class FlightPage extends React.Component {
 
         API.getFlights(payload.origin, payload.destination, payload.departure, payload.returnDate)
         .then(results => {
+            console.log(results);
             this.setState({
                 flights: results.data.data
             });

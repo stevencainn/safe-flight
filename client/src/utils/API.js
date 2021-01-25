@@ -94,7 +94,7 @@ export default {
     getFlights: function (origin, destination, departure, returnDate) {
     return axios({
             method:'GET',
-            url: `https://cors-anywhere.herokuapp.com/https://test.api.amadeus.com/v1/shopping/flight-offers?origin=${origin}&destination=${destination}&departureDate=${departure}&returnDate=${returnDate}&currency=USD&nonStop=true`,
+            url: `https://cors-anywhere.herokuapp.com/https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=${origin}&destinationLocationCode=${destination}&departureDate=${departure}&returnDate=${returnDate}&currencyCode=USD&nonStop=true&adults=1`,
             headers:{
                 common:{
                     Authorization: 'Bearer ' + localStorage.getItem('access_token')
